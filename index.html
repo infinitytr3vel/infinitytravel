@@ -25,6 +25,14 @@
     <meta name="twitter:title" content="إنفينيتي ترافيل | أفضل عروض السياحة الداخلية">
     <meta name="twitter:description" content="احجز الآن رحلتك القادمة في أجمل وجهات مصر بأسعار تنافسية وبرامج ممتعة.">
 
+    <!-- ================= Local SEO & Advanced Meta ================= -->
+    <meta name="geo.region" content="EG-BA" />
+    <meta name="geo.placename" content="Hurghada" />
+    <meta name="geo.position" content="27.2579;33.8116" />
+    <meta name="ICBM" content="27.2579, 33.8116" />
+    <meta name="language" content="Arabic">
+    <meta name="revisit-after" content="2 days">
+
     <!-- ================= Favicon ================= -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
@@ -54,6 +62,78 @@
       },
       "priceRange": "$$",
       "description": "أفضل شركة سياحة داخلية في مصر، نقدم عروض رحلات وحجوزات فنادق في شرم الشيخ، الغردقة، الساحل الشمالي والأقصر وأسوان."
+    }
+    </script>
+
+    <!-- ================= Advanced Schema: Breadcrumbs ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://infinitytravel.online/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "الوجهات السياحية",
+        "item": "https://infinitytravel.online/#destinations"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "خدماتنا",
+        "item": "https://infinitytravel.online/#services"
+      }]
+    }
+    </script>
+
+    <!-- ================= Advanced Schema: Products (Destinations) ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "رحلات شرم الشيخ والغردقة",
+          "description": "أفضل عروض الرحلات والفنادق في البحر الأحمر.",
+          "image": "https://infinitytravel.online/images/red-sea.jpg",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "EGP",
+            "lowPrice": "1500",
+            "highPrice": "15000",
+            "offerCount": "20"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "125"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "نايل كروز الأقصر وأسوان",
+          "description": "رحلات نيلية فاخرة بين الأقصر وأسوان.",
+          "image": "https://infinitytravel.online/images/luxor-aswan.jpg",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "EGP",
+            "lowPrice": "3000",
+            "highPrice": "25000",
+            "offerCount": "15"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "89"
+          }
+        }
+      ]
     }
     </script>
 
@@ -283,16 +363,16 @@
                     <!-- Card 1 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/red-sea.jpg" alt="رحلات شرم الشيخ والغردقة ومرسى علم" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/red-sea.jpg" alt="عروض رحلات شرم الشيخ والغردقة ومرسى علم السياحية" title="رحلات البحر الأحمر - شرم الشيخ والغردقة" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">البحر الأحمر</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">شرم الشيخ والغردقة</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition" title="أفضل فنادق شرم الشيخ والغردقة">شرم الشيخ والغردقة</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">استمتع بأجمل الشعاب المرجانية والأنشطة البحرية في البحر الأحمر، بالإضافة إلى مرسى علم الساحرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">شرم الشيخ</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الغردقة</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">مرسى علم</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="حجز فنادق شرم الشيخ">شرم الشيخ</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="حجز فنادق الغردقة">الغردقة</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="رحلات مرسى علم">مرسى علم</span>
                             </div>
                         </div>
                     </article>
@@ -300,16 +380,16 @@
                     <!-- Card 2 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/north-coast.jpg" alt="رحلات الساحل الشمالي والعلمين ومرسى مطروح" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/north-coast.jpg" alt="عروض مصايف الساحل الشمالي والعلمين ومرسى مطروح" title="مصايف البحر المتوسط - الساحل والعلمين" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">البحر المتوسط</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">الساحل والعلمين</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition" title="إيجار شاليهات الساحل الشمالي">الساحل والعلمين</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">رمال بيضاء ومياه فيروزية لا مثيل لها في الساحل الشمالي، مرسى مطروح، ومدينة العلمين الجديدة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الساحل الشمالي</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">العلمين</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">مطروح</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="قرى الساحل الشمالي">الساحل الشمالي</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="فنادق العلمين الجديدة">العلمين</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="مصيف مرسى مطروح">مطروح</span>
                             </div>
                         </div>
                     </article>
@@ -317,16 +397,16 @@
                     <!-- Card 3 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/sinai.jpg" alt="رحلات دهب ونويبع وطابا" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/sinai.jpg" alt="مخيمات ورحلات دهب ونويبع وطابا في سيناء" title="رحلات سفاري وكامبات سيناء" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">سحر سيناء</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">دهب ونويبع وطابا</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition" title="عروض رحلات دهب">دهب ونويبع وطابا</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">عش تجربة الاسترخاء التام في مخيمات راس شيطان ودهب، والتمتع بالطبيعة الجبلية الساحرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">دهب</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">طابا</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">راس شيطان</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="كامبات دهب">دهب</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="فنادق طابا">طابا</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="مخيمات راس شيطان">راس شيطان</span>
                             </div>
                         </div>
                     </article>
@@ -334,15 +414,15 @@
                     <!-- Card 4 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/oasis.jpg" alt="رحلات سفاري سيوة والواحات البحرية" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/oasis.jpg" alt="رحلات سفاري سيوة والواحات البحرية ومخيمات الصحراء" title="رحلات السفاري في مصر" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-accent shadow-sm">سفاري ومغامرات</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-accent transition">سيوة والواحات البحرية</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-accent transition" title="أفضل برامج رحلات سيوة">سيوة والواحات البحرية</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">اكتشف سحر الصحراء، عيون المياه الكبريتية، وبحيرات الملح في سيوة ومغامرات الواحات.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">سيوة</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الواحات البحرية</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="سفاري سيوة">سيوة</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="الواحات البحرية والصحراء البيضاء">الواحات البحرية</span>
                             </div>
                         </div>
                     </article>
@@ -350,16 +430,16 @@
                     <!-- Card 5 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/luxor-aswan.jpg" alt="رحلات نايل كروز الأقصر وأسوان" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/luxor-aswan.jpg" alt="عروض رحلات نايل كروز الأقصر وأسوان في الشتاء" title="الرحلات النيلية - الأقصر وأسوان" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">عراقة التاريخ</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">نايل كروز الأقصر وأسوان</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition" title="حجز نايل كروز 5 نجوم">نايل كروز الأقصر وأسوان</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">رحلات نيلية فاخرة (نايل كروز) بين الأقصر وأسوان لاستكشاف ثلث آثار العالم القديم.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الأقصر</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">أسوان</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">نايل كروز</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="معالم الأقصر السياحية">الأقصر</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="مزارات أسوان">أسوان</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="عروض النايل كروز">نايل كروز</span>
                             </div>
                         </div>
                     </article>
@@ -367,15 +447,15 @@
                     <!-- Card 6 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
-                            <img src="images/cairo-sokhna.jpg" alt="حجز فنادق العين السخنة والقاهرة" loading="lazy" class="w-full h-full object-cover img-transition">
+                            <img src="images/cairo-sokhna.jpg" alt="حجز فنادق العين السخنة وتذاكر الجلالة أكوا بارك والقاهرة" title="إجازات العين السخنة والقاهرة" loading="lazy" class="w-full h-full object-cover img-transition">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">إجازات سريعة</div>
                         </div>
                         <div class="p-6 flex-grow">
-                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">العين السخنة والقاهرة</h3>
+                            <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition" title="عروض الداي يوز في العين السخنة">العين السخنة والقاهرة</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">استمتع بجميع فنادق العين السخنة، الجلالة أكوا بارك، وإقامات مميزة في فنادق القاهرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">العين السخنة</span>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الجلالة أكوا بارك</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="قرى العين السخنة">العين السخنة</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded" title="تذاكر الجلالة أكوا بارك">الجلالة أكوا بارك</span>
                             </div>
                         </div>
                     </article>
