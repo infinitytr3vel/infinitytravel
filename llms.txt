@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+مسار خريطة الموقع لمساعدة جوجل على الوصول لها بسرعة
+
+Sitemap: https://infinitytravel.online/sitemap.xml
