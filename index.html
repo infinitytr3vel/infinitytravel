@@ -28,6 +28,7 @@
     <!-- ================= Favicon ================= -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="preload" as="image" href="images/hero-bg.jpg">
 
     <!-- ================= Schema Markup (Rich Snippets for Google) ================= -->
     <script type="application/ld+json">
@@ -53,6 +54,28 @@
       },
       "priceRange": "$$",
       "description": "أفضل شركة سياحة داخلية في مصر، نقدم عروض رحلات وحجوزات فنادق في شرم الشيخ، الغردقة، الساحل الشمالي والأقصر وأسوان."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "ما هي أفضل وجهات السياحة الداخلية في مصر لصيف 2024؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تعتبر شرم الشيخ، الغردقة، والساحل الشمالي من أفضل الوجهات الصيفية. في إنفينيتي ترافيل، نوفر عروض حجز فنادق ورحلات شاملة الانتقالات لهذه الوجهات بأفضل الأسعار."
+        }
+      }, {
+        "@type": "Question",
+        "name": "هل توفرون حجز رحلات نايل كروز بين الأقصر وأسوان؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نقدم برامج نايل كروز (Nile Cruise) مميزة جداً تبدأ من 3 ليالي و 4 أيام، تشمل المزارات السياحية في الأقصر وأسوان مع مرشد سياحي وإقامة كاملة."
+        }
+      }]
     }
     </script>
 
@@ -255,6 +278,32 @@
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Testimonials Section -->
+        <section class="py-20 bg-primary/5 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">ماذا يقول عملاؤنا عن رحلاتنا؟</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent">
+                        <div class="flex text-accent mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">"طلعت معاهم رحلة الغردقة وكانت من أفضل الرحلات، الفندق كان ممتاز والتنظيم أكثر من رائع. شكراً إنفينيتي ترافيل على المصداقية."</p>
+                        <h4 class="font-bold text-dark text-sm">- أحمد محمود</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-primary">
+                        <div class="flex text-accent mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">"حجزت نايل كروز الأقصر وأسوان عن طريقهم، السعر كان أقل من شركات كتير تانية والخدمة VIP فعلاً. أنصح بالتعامل معاهم بشدة."</p>
+                        <h4 class="font-bold text-dark text-sm">- سارة عبدالرحمن</h4>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-accent">
+                        <div class="flex text-accent mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">"أسرع رد وأفضل خدمة عملاء، حجزولي في العين السخنة في نفس اليوم وكان شاليه يجنن. شركة محترمة ومضمونة."</p>
+                        <h4 class="font-bold text-dark text-sm">- م. كريم حسن</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
                     <!-- Cards ... -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
@@ -399,6 +448,54 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (SEO Boost) -->
+        <section id="faq" class="py-24 bg-white overflow-hidden w-full">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">الأسئلة الشائعة عن رحلاتنا</h2>
+                    <p class="text-slate-600 mt-4">كل ما تحتاج معرفته عن حجز رحلات السياحة الداخلية في مصر معنا.</p>
+                </div>
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <!-- سؤال 1 -->
+                    <details class="group bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg text-dark list-none">
+                            ما هي أفضل وجهات السياحة الداخلية في مصر لصيف 2024؟
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-primary"></i>
+                            </span>
+                        </summary>
+                        <p class="text-slate-600 mt-4 leading-relaxed">
+                            تعتبر شرم الشيخ، الغردقة، والساحل الشمالي من أفضل الوجهات الصيفية. في إنفينيتي ترافيل، نوفر عروض حجز فنادق ورحلات شاملة الانتقالات لهذه الوجهات بأفضل الأسعار.
+                        </p>
+                    </details>
+                    <!-- سؤال 2 -->
+                    <details class="group bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg text-dark list-none">
+                            هل توفرون حجز رحلات نايل كروز بين الأقصر وأسوان؟
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-primary"></i>
+                            </span>
+                        </summary>
+                        <p class="text-slate-600 mt-4 leading-relaxed">
+                            نعم، نقدم برامج نايل كروز (Nile Cruise) مميزة جداً تبدأ من 3 ليالي و 4 أيام، تشمل المزارات السياحية في الأقصر وأسوان مع مرشد سياحي وإقامة كاملة.
+                        </p>
+                    </details>
+                    <!-- سؤال 3 -->
+                    <details class="group bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg text-dark list-none">
+                            كيف يمكنني تأكيد حجز رحلتي مع إنفينيتي ترافيل؟
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-primary"></i>
+                            </span>
+                        </summary>
+                        <p class="text-slate-600 mt-4 leading-relaxed">
+                            يمكنك تأكيد الحجز بسهولة عبر التواصل معنا على واتساب (01000466853)، وسيقوم فريقنا بإرسال كافة تفاصيل الدفع وطرق السداد المتاحة والآمنة.
+                        </p>
+                    </details>
                 </div>
             </div>
         </section>
