@@ -27,7 +27,7 @@
 
     <!-- ================= Favicon ================= -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon.png"> <!-- لأجهزة الآيفون والآيباد -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
 
     <!-- ================= Schema Markup (Rich Snippets for Google) ================= -->
     <script type="application/ld+json">
@@ -74,10 +74,10 @@
                         sans: ['Tajawal', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#0284c7', // Sky blue 600
-                        secondary: '#0369a1', // Sky blue 700
-                        accent: '#f59e0b', // Amber 500
-                        dark: '#1e293b', // Slate 800
+                        primary: '#0284c7', 
+                        secondary: '#0369a1', 
+                        accent: '#f59e0b', 
+                        dark: '#1e293b', 
                     }
                 }
             }
@@ -85,7 +85,6 @@
     </script>
     
     <style>
-        /* التعديل الجذري لمنع التمدد الجانبي (Scroll Issue Fix) */
         html, body {
             max-width: 100vw;
             overflow-x: hidden;
@@ -110,7 +109,6 @@
         .img-transition {
             transition: transform 0.5s ease;
         }
-        /* Floating WhatsApp Button */
         .float-whatsapp {
             position: fixed;
             width: 60px;
@@ -142,7 +140,6 @@
         <nav class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300" id="navbar" aria-label="القائمة الرئيسية">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
-                    
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center cursor-pointer max-w-[70%]" onclick="window.scrollTo(0,0)" title="الرئيسية - إنفينيتي ترافيل">
                         <img src="images/logo.png" alt="لوجو إنفينيتي ترافيل" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm max-w-full">
@@ -186,35 +183,23 @@
         <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20 pb-10 relative w-full overflow-hidden">
             <div class="text-center px-4 md:px-8 max-w-5xl z-10 w-full mx-auto" data-aos="fade-up" data-aos-duration="1000">
                 <span class="bg-accent text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-4 md:mb-6 inline-block shadow-md">اكتشف سحر مصر بأفضل الأسعار</span>
-                
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-snug md:leading-tight drop-shadow-lg break-words">
                     رحلتك المثالية تبدأ مع <br class="hidden sm:block"/> <span class="text-transparent bg-clip-text bg-gradient-to-l from-blue-300 to-white block sm:inline mt-2 sm:mt-0">إنفينيتي ترافيل</span>
                 </h1>
-                
                 <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 mb-8 md:mb-10 text-shadow max-w-3xl mx-auto px-2">
                     أفضل عروض السياحة الداخلية في مصر. من شواطئ البحر الأحمر الساحرة إلى عراقة الأقصر وأسوان وسحر الواحات.
                 </p>
-                
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-4 sm:px-0">
-                    <a href="#destinations" class="w-full sm:w-auto bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-blue-500 transition shadow-[0_0_20px_rgba(2,132,199,0.5)] transform hover:scale-105 text-center" title="استكشف برامج الرحلات">
-                        استكشف الوجهات
-                    </a>
-                    <a href="#contact" class="w-full sm:w-auto bg-white/20 backdrop-blur-sm border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-dark transition transform hover:scale-105 text-center">
-                        تواصل معنا
-                    </a>
+                    <a href="#destinations" class="w-full sm:w-auto bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-blue-500 transition shadow-[0_0_20px_rgba(2,132,199,0.5)] transform hover:scale-105 text-center">استكشف الوجهات</a>
+                    <a href="#contact" class="w-full sm:w-auto bg-white/20 backdrop-blur-sm border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-dark transition transform hover:scale-105 text-center">تواصل معنا</a>
                 </div>
-            </div>
-            
-            <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden md:block">
             </div>
         </section>
 
-        <!-- About Us Section (من نحن) -->
+        <!-- About Us Section -->
         <section id="about" class="py-24 bg-white overflow-hidden w-full relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    
-                    <!-- Content Side -->
                     <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000">
                         <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">قصتنا</span>
                         <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-6 leading-tight">
@@ -226,8 +211,6 @@
                         <p class="text-slate-600 mb-8 text-lg leading-relaxed">
                             رؤيتنا هي إبراز سحر وجمال مصر الحقيقي، بدءاً من شواطئ البحر الأحمر الخلابة وصولاً إلى عراقة الصعيد وسحر الواحات. نضع راحة وأمان عملائنا في قمة أولوياتنا لنقدم تجربة سفر تتجاوز التوقعات، وتجعل كل لحظة من عطلتك استثنائية.
                         </p>
-                        
-                        <!-- Stats / Features -->
                         <div class="grid grid-cols-2 gap-6">
                             <div class="border-r-4 border-accent pr-4">
                                 <h3 class="text-3xl font-black text-dark mb-1">+10</h3>
@@ -239,17 +222,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Image Side -->
                     <div class="lg:w-1/2 relative w-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        <!-- Decorative elements -->
                         <div class="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl hidden sm:block"></div>
                         <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/20 rounded-full blur-xl hidden sm:block"></div>
-                        
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                             <img src="images/about-us.jpg" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Infinity+Travel'" alt="فريق عمل شركة إنفينيتي ترافيل للسياحة" loading="lazy" class="w-full h-auto object-cover transform hover:scale-105 transition duration-700">
-                            
-                            <!-- Floating Badge -->
                             <div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg border-r-4 border-primary animate-pulse">
                                 <div class="flex items-center gap-2 sm:gap-3">
                                     <i class="fa-solid fa-shield-halved text-primary text-xl sm:text-2xl"></i>
@@ -261,7 +238,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -278,22 +254,16 @@
                         نوفر لك رحلات إلى أجمل الأماكن في مصر بأسعار تنافسية وبرامج ممتعة تناسب جميع أفراد العائلة.
                     </p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Destination 1 -->
+                    <!-- Cards ... -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/red-sea.jpg" alt="رحلات شرم الشيخ والغردقة ومرسى علم" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
-                                البحر الأحمر
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">البحر الأحمر</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">شرم الشيخ والغردقة</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                استمتع بأجمل الشعاب المرجانية والأنشطة البحرية في البحر الأحمر، بالإضافة إلى مرسى علم الساحرة.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">استمتع بأجمل الشعاب المرجانية والأنشطة البحرية في البحر الأحمر، بالإضافة إلى مرسى علم الساحرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">شرم الشيخ</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الغردقة</span>
@@ -301,20 +271,14 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Destination 2 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/north-coast.jpg" alt="رحلات الساحل الشمالي والعلمين ومرسى مطروح" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
-                                البحر المتوسط
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">البحر المتوسط</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">الساحل والعلمين</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                رمال بيضاء ومياه فيروزية لا مثيل لها في الساحل الشمالي، مرسى مطروح، ومدينة العلمين الجديدة.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">رمال بيضاء ومياه فيروزية لا مثيل لها في الساحل الشمالي، مرسى مطروح، ومدينة العلمين الجديدة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الساحل الشمالي</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">العلمين</span>
@@ -322,20 +286,14 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Destination 3 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/sinai.jpg" alt="رحلات دهب ونويبع وطابا" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
-                                سحر سيناء
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">سحر سيناء</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">دهب ونويبع وطابا</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                عش تجربة الاسترخاء التام في مخيمات راس شيطان ودهب، والتمتع بالطبيعة الجبلية الساحرة.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">عش تجربة الاسترخاء التام في مخيمات راس شيطان ودهب، والتمتع بالطبيعة الجبلية الساحرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">دهب</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">طابا</span>
@@ -343,40 +301,28 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Destination 4 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/oasis.jpg" alt="رحلات سفاري سيوة والواحات البحرية" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-accent shadow-sm">
-                                سفاري ومغامرات
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-accent shadow-sm">سفاري ومغامرات</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-accent transition">سيوة والواحات البحرية</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                اكتشف سحر الصحراء، عيون المياه الكبريتية، وبحيرات الملح في سيوة ومغامرات الواحات.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">اكتشف سحر الصحراء، عيون المياه الكبريتية، وبحيرات الملح في سيوة ومغامرات الواحات.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">سيوة</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الواحات البحرية</span>
                             </div>
                         </div>
                     </article>
-
-                    <!-- Destination 5 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/luxor-aswan.jpg" alt="رحلات نايل كروز الأقصر وأسوان" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
-                                عراقة التاريخ
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">عراقة التاريخ</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">نايل كروز الأقصر وأسوان</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                رحلات نيلية فاخرة (نايل كروز) بين الأقصر وأسوان لاستكشاف ثلث آثار العالم القديم.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">رحلات نيلية فاخرة (نايل كروز) بين الأقصر وأسوان لاستكشاف ثلث آثار العالم القديم.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الأقصر</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">أسوان</span>
@@ -384,27 +330,20 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Destination 6 -->
                     <article class="bg-white rounded-2xl shadow-lg overflow-hidden group card-zoom cursor-pointer flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative h-64 w-full bg-slate-200 overflow-hidden flex items-center justify-center">
                             <img src="images/cairo-sokhna.jpg" alt="حجز فنادق العين السخنة والقاهرة" loading="lazy" class="w-full h-full object-cover img-transition">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
-                                إجازات سريعة
-                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">إجازات سريعة</div>
                         </div>
                         <div class="p-6 flex-grow">
                             <h3 class="text-2xl font-bold text-dark mb-2 group-hover:text-primary transition">العين السخنة والقاهرة</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                استمتع بجميع فنادق العين السخنة، الجلالة أكوا بارك، وإقامات مميزة في فنادق القاهرة.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">استمتع بجميع فنادق العين السخنة، الجلالة أكوا بارك، وإقامات مميزة في فنادق القاهرة.</p>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">العين السخنة</span>
                                 <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded">الجلالة أكوا بارك</span>
                             </div>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>
@@ -413,18 +352,14 @@
         <section id="services" class="py-24 bg-white overflow-hidden w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <!-- Image side -->
                     <div class="lg:w-1/2 relative w-full" data-aos="fade-left">
                         <div class="absolute inset-0 bg-primary rounded-3xl transform translate-x-4 translate-y-4 opacity-20 hidden sm:block"></div>
                         <div class="relative bg-slate-200 rounded-3xl shadow-2xl z-10 w-full h-[350px] md:h-[500px] overflow-hidden">
                             <img src="images/services.jpg" alt="سهرات العشاء النيلية وحجوزات الفنادق" loading="lazy" class="w-full h-full object-cover">
                         </div>
-                        
                         <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block animate-pulse">
                             <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-accent text-3xl">
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
+                                <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-accent text-3xl"><i class="fa-solid fa-star"></i></div>
                                 <div>
                                     <p class="text-sm text-slate-500 font-bold">تقييم العملاء</p>
                                     <p class="text-xl font-extrabold text-dark">ممتاز (5/5)</p>
@@ -432,48 +367,35 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Content side -->
                     <div class="lg:w-1/2 w-full" data-aos="fade-right">
                         <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">برامج وخدمات سياحية مصممة خصيصاً لراحتك</h2>
-                        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
-                            في <strong class="text-primary">إنفينيتي ترافيل</strong>، لا نقدم مجرد رحلات، بل نصنع ذكريات لا تُنسى. نتميز بتقديم خدمات متكاملة للسياحة الداخلية تلبي كافة الأذواق.
-                        </p>
-
+                        <p class="text-slate-600 mb-8 text-lg leading-relaxed">في <strong class="text-primary">إنفينيتي ترافيل</strong>، لا نقدم مجرد رحلات، بل نصنع ذكريات لا تُنسى. نتميز بتقديم خدمات متكاملة للسياحة الداخلية تلبي كافة الأذواق.</p>
                         <div class="space-y-6">
                             <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl">
-                                    <i class="fa-solid fa-ship"></i>
-                                </div>
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-ship"></i></div>
                                 <div>
                                     <h4 class="text-xl font-bold text-dark mb-1">سهرات العشاء النيلية</h4>
                                     <p class="text-slate-600 text-sm">استمتع بسهرات عشاء راقية في قلب النيل على متن أحدث البواخر المتحركة بالقاهرة مع برامج ترفيهية مميزة.</p>
                                 </div>
                             </div>
                             <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl">
-                                    <i class="fa-solid fa-water"></i>
-                                </div>
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-water"></i></div>
                                 <div>
                                     <h4 class="text-xl font-bold text-dark mb-1">تذاكر الجلالة أكوا بارك</h4>
                                     <p class="text-slate-600 text-sm">أقوى العروض لرحلات اليوم الواحد والإقامات في منتجع الجلالة والألعاب المائية الممتعة.</p>
                                 </div>
                             </div>
                             <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl">
-                                    <i class="fa-solid fa-hotel"></i>
-                                </div>
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-xl"><i class="fa-solid fa-hotel"></i></div>
                                 <div>
                                     <h4 class="text-xl font-bold text-dark mb-1">أفضل حجوزات الفنادق</h4>
                                     <p class="text-slate-600 text-sm">توفير أفضل الأسعار لحجوزات الفنادق في قلب القاهرة، العين السخنة، شرم الشيخ وجميع المدن الساحلية.</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="mt-10">
                             <a href="tel:+201000466853" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-dark text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition">
-                                <i class="fa-solid fa-phone-volume"></i>
-                                استفسر عن برامجنا الآن
+                                <i class="fa-solid fa-phone-volume"></i> استفسر عن برامجنا الآن
                             </a>
                         </div>
                     </div>
@@ -486,62 +408,42 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">تواصل معنا الآن</h2>
-                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">
-                        نحن هنا للرد على كافة استفساراتك وتلبية طلبات الحجز الخاصة بك بأسرع وقت.
-                    </p>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto">نحن هنا للرد على كافة استفساراتك وتلبية طلبات الحجز الخاصة بك بأسرع وقت.</p>
                 </div>
-
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                    <!-- Contact Info -->
                     <div class="lg:col-span-1 bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="text-2xl font-bold text-dark mb-8">معلومات التواصل</h3>
-                        
                         <address class="space-y-6 not-italic">
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <h4 class="font-bold text-dark">المقر الرئيسي</h4>
                                     <p class="text-slate-600 text-sm mt-1 leading-relaxed">الغردقة - شارع مجمع البنوك - منطقة 2 - أمام هانيمكس للأثاث.</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1"><i class="fa-solid fa-phone"></i></div>
                                 <div>
                                     <h4 class="font-bold text-dark">رقم الهاتف / واتساب</h4>
                                     <a href="tel:+201000466853" class="text-primary hover:underline text-sm font-bold mt-1 block" dir="ltr">0100 046 6853</a>
                                 </div>
                             </div>
-
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1"><i class="fa-solid fa-envelope"></i></div>
                                 <div>
                                     <h4 class="font-bold text-dark">البريد الإلكتروني</h4>
                                     <a href="mailto:info@infinitytravel.online" class="text-slate-600 hover:text-primary transition text-sm mt-1 block">info@infinitytravel.online</a>
                                 </div>
                             </div>
                         </address>
-
                         <div class="mt-8 pt-8 border-t border-slate-100">
                             <h4 class="font-bold text-dark mb-4">تابعنا على السوشيال ميديا</h4>
                             <div class="flex gap-4">
-                                <a href="https://www.facebook.com/infinitytr3vel" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك" class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-md">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com/infinitytr3vel" target="_blank" rel="noopener noreferrer" aria-label="انستجرام" class="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-xl hover:opacity-90 transition transform hover:-translate-y-1 shadow-md">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
+                                <a href="https://www.facebook.com/infinitytr3vel" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-md"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/infinitytr3vel" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-xl hover:opacity-90 transition transform hover:-translate-y-1 shadow-md"><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Contact Form -->
                     <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-lg relative w-full" data-aos="fade-up" data-aos-delay="200">
                         <div id="form-success-msg" class="hidden absolute inset-0 bg-white/95 z-10 rounded-2xl flex flex-col items-center justify-center text-center p-8 backdrop-blur-sm">
                             <i class="fa-solid fa-circle-check text-5xl text-green-500 mb-4"></i>
@@ -549,7 +451,6 @@
                             <p class="text-slate-600 mb-6">سيتم تحويلك الآن لتطبيق الواتساب لإرسالها مباشرة إلينا.</p>
                             <button onclick="document.getElementById('form-success-msg').classList.add('hidden')" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-secondary transition">إغلاق</button>
                         </div>
-
                         <h3 class="text-2xl font-bold text-dark mb-6">أرسل استفسارك للحجز</h3>
                         <form id="contact-form" class="space-y-6" onsubmit="sendToWhatsApp(event)">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -587,16 +488,12 @@
                         </form>
                     </div>
                 </div>
-
-                <!-- Google Map Section (تم إضافته هنا) -->
                 <div class="mt-12 bg-white p-4 rounded-2xl shadow-lg border-t-4 border-slate-200" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-2xl font-bold text-dark mb-6 text-center">موقعنا على الخريطة</h3>
                     <div class="w-full h-64 md:h-96 rounded-xl overflow-hidden relative">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.36347654677533!2d33.82929370590216!3d27.19665685380237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1786780128224!5m2!1sen!2seg" class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <!-- نهاية إضافة الخريطة -->
-
             </div>
         </section>
     </main>
@@ -605,16 +502,12 @@
     <footer class="bg-dark text-slate-300 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-slate-700">
-                
                 <div class="md:col-span-1">
                     <div class="flex items-center mb-4">
                         <img src="images/logo.png" alt="لوجو إنفينيتي ترافيل" class="h-14 w-auto object-contain bg-white/95 rounded-lg px-3 py-1 shadow-md">
                     </div>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        شريكك الأمثل لاكتشاف أجمل الوجهات السياحية داخل مصر. نقدم عروضاً تناسب جميع الفئات بجودة ومصداقية عالية.
-                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">شريكك الأمثل لاكتشاف أجمل الوجهات السياحية داخل مصر. نقدم عروضاً تناسب جميع الفئات بجودة ومصداقية عالية.</p>
                 </div>
-
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-bold text-white mb-4">روابط سريعة</h3>
                     <ul class="space-y-2 text-sm">
@@ -625,25 +518,23 @@
                         <li><a href="#contact" class="hover:text-primary transition"><i class="fa-solid fa-angle-left text-xs ml-1"></i> اتصل بنا للحجز</a></li>
                     </ul>
                 </div>
-
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-bold text-white mb-4">تواصل معنا سريعاً</h3>
                     <div class="flex flex-col space-y-3 text-sm">
                         <a href="tel:+201000466853" class="hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-phone"></i> 0100 046 6853</a>
                         <a href="mailto:info@infinitytravel.online" class="hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-envelope"></i> info@infinitytravel.online</a>
-                        <p class="flex items-start gap-2 text-slate-400">
-                            <i class="fa-solid fa-location-dot mt-1"></i> 
-                            الغردقة - شارع مجمع البنوك - منطقة 2 - أمام هانيمكس.
-                        </p>
+                        <p class="flex items-start gap-2 text-slate-400"><i class="fa-solid fa-location-dot mt-1"></i> الغردقة - شارع مجمع البنوك - منطقة 2 - أمام هانيمكس.</p>
                     </div>
                 </div>
-
             </div>
             
             <div class="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
                 <p>&copy; <span id="year"></span> إنفينيتي ترافيل (Infinity Travel). جميع الحقوق محفوظة.</p>
-                <div class="mt-4 md:mt-0 flex gap-4">
-                    <span>صُنع بحب من أجل سياحة أفضل في مصر</span>
+                <!-- التعديل هنا: إضافة روابط الشروط والأحكام والخصوصية -->
+                <div class="mt-4 md:mt-0 flex gap-4 text-xs md:text-sm font-semibold">
+                    <a href="privacy.html" class="hover:text-primary transition text-slate-400">سياسة الخصوصية</a>
+                    <span class="text-slate-700">|</span>
+                    <a href="terms.html" class="hover:text-primary transition text-slate-400">الشروط والأحكام</a>
                 </div>
             </div>
         </div>
@@ -657,80 +548,52 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Animations
-        AOS.init({
-            once: true, // whether animation should happen only once - while scrolling down
-            offset: 50, // تم تقليل القيمة ليظهر الأنميشن بشكل أسرع قليلاً
-            duration: 800,
-        });
-
-        // Current Year for Footer
+        AOS.init({ once: true, offset: 50, duration: 800 });
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
+        
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const navbar = document.getElementById('navbar');
 
-        // Toggle menu when clicking the button
         btn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent click from bubbling up
+            e.stopPropagation();
             menu.classList.toggle('hidden');
         });
 
-        // Close menu when clicking any link inside it
         const mobileLinks = menu.querySelectorAll('a');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => { menu.classList.add('hidden'); });
         });
         
-        // Close menu when clicking outside of it
         document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && !menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
+            if (!navbar.contains(e.target) && !menu.classList.contains('hidden')) { menu.classList.add('hidden'); }
         });
 
-        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 navbar.classList.add('shadow-lg');
                 navbar.classList.remove('py-2');
-            } else {
-                navbar.classList.remove('shadow-lg');
-            }
+            } else { navbar.classList.remove('shadow-lg'); }
         });
 
-        // WhatsApp Form Logic
         function sendToWhatsApp(event) {
             event.preventDefault();
-            
             const name = document.getElementById('client-name').value;
             const phone = document.getElementById('client-phone').value;
             const destination = document.getElementById('client-destination').value || 'غير محدد';
             const message = document.getElementById('client-message').value;
 
             let text = `مرحباً إنفينيتي ترافيل،\nلدي طلب حجز / استفسار من الموقع:\n\n`;
-            text += `👤 *الاسم:* ${name}\n`;
-            text += `📞 *رقم الهاتف:* ${phone}\n`;
-            text += `🏖️ *الوجهة المطلوبة:* ${destination}\n\n`;
-            text += `💬 *التفاصيل:*\n${message}`;
+            text += `👤 *الاسم:* ${name}\n📞 *رقم الهاتف:* ${phone}\n🏖️ *الوجهة المطلوبة:* ${destination}\n\n💬 *التفاصيل:*\n${message}`;
 
             const encodedText = encodeURIComponent(text);
             const waNumber = '201000466853';
             const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
             
             window.open(waUrl, '_blank');
-            
             document.getElementById('form-success-msg').classList.remove('hidden');
             document.getElementById('contact-form').reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                document.getElementById('form-success-msg').classList.add('hidden');
-            }, 5000);
+            setTimeout(() => { document.getElementById('form-success-msg').classList.add('hidden'); }, 5000);
         }
     </script>
 </body>
