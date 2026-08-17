@@ -108,11 +108,11 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label for="phone" class="block text-sm font-bold text-slate-700 mb-2">رقم الموبايل <span class="text-red-500">*</span></label>
-                                    <input type="tel" id="phone" name="رقم الموبايل" required class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
+                                    <input type="tel" id="phone" name="رقم الموبايل" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
                                 </div>
                                 <div>
                                     <label for="whatsapp" class="block text-sm font-bold text-slate-700 mb-2">رقم الواتساب <span class="text-sm text-slate-400 font-normal">(إن وجد)</span></label>
-                                    <input type="tel" id="whatsapp" name="رقم الواتساب" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
+                                    <input type="tel" id="whatsapp" name="رقم الواتساب" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
                                 </div>
                             </div>
 
@@ -122,8 +122,42 @@
                                     <input type="email" id="email" name="الإيميل" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="example@mail.com">
                                 </div>
                                 <div>
-                                    <label for="city" class="block text-sm font-bold text-slate-700 mb-2">المحافظة / المدينة</label>
-                                    <input type="text" id="city" name="المحافظة" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white" placeholder="اكتب اسم المحافظة">
+                                    <label for="city" class="block text-sm font-bold text-slate-700 mb-2">المحافظة</label>
+                                    <div class="relative">
+                                        <select id="city" name="المحافظة" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                            <option value="" disabled selected>-- اختر المحافظة --</option>
+                                            <option value="القاهرة">القاهرة</option>
+                                            <option value="الإسكندرية">الإسكندرية</option>
+                                            <option value="الجيزة">الجيزة</option>
+                                            <option value="القليوبية">القليوبية</option>
+                                            <option value="الدقهلية">الدقهلية</option>
+                                            <option value="الغربية">الغربية</option>
+                                            <option value="المنوفية">المنوفية</option>
+                                            <option value="كفر الشيخ">كفر الشيخ</option>
+                                            <option value="الشرقية">الشرقية</option>
+                                            <option value="بورسعيد">بورسعيد</option>
+                                            <option value="الإسماعيلية">الإسماعيلية</option>
+                                            <option value="السويس">السويس</option>
+                                            <option value="دمياط">دمياط</option>
+                                            <option value="البحيرة">البحيرة</option>
+                                            <option value="مطروح">مطروح</option>
+                                            <option value="شمال سيناء">شمال سيناء</option>
+                                            <option value="جنوب سيناء">جنوب سيناء</option>
+                                            <option value="بني سويف">بني سويف</option>
+                                            <option value="المنيا">المنيا</option>
+                                            <option value="الفيوم">الفيوم</option>
+                                            <option value="أسيوط">أسيوط</option>
+                                            <option value="سوهاج">سوهاج</option>
+                                            <option value="قنا">قنا</option>
+                                            <option value="الأقصر">الأقصر</option>
+                                            <option value="أسوان">أسوان</option>
+                                            <option value="البحر الأحمر">البحر الأحمر</option>
+                                            <option value="الوادي الجديد">الوادي الجديد</option>
+                                        </select>
+                                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-slate-500">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,6 +223,11 @@
                                     <input type="number" id="children" name="عدد_الأطفال" min="0" value="0" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 text-center">
                                 </div>
                             </div>
+
+                            <!-- حاوية أعمار الأطفال الديناميكية (مخفية افتراضياً) -->
+                            <div id="childrenAgesContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 hidden mt-2 border-t border-slate-100 pt-4">
+                                <!-- سيتم إضافة حقول أعمار الأطفال هنا تلقائياً بواسطة الجافاسكربت -->
+                            </div>
                         </div>
                     </div>
 
@@ -221,21 +260,39 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // --- كود معالجة أعمار الأطفال الديناميكي ---
+        const childrenInput = document.getElementById('children');
+        const agesContainer = document.getElementById('childrenAgesContainer');
+
+        childrenInput.addEventListener('input', function() {
+            // التأكد من أن العدد ليس سالباً
+            const count = Math.max(0, parseInt(this.value) || 0);
+            
+            // إفراغ الحاوية قبل إضافة الحقول الجديدة
+            agesContainer.innerHTML = '';
+
+            if (count > 0) {
+                agesContainer.classList.remove('hidden'); // إظهار الحاوية
+                
+                // إضافة خانة عمر لكل طفل
+                for (let i = 1; i <= count; i++) {
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+                        <label for="childAge${i}" class="block text-sm font-bold text-slate-700 mb-2">عمر الطفل ${i} <span class="text-red-500">*</span></label>
+                        <input type="number" id="childAge${i}" name="عمر_الطفل_${i}" min="0" max="11" required class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 text-center" placeholder="بالسنوات">
+                    `;
+                    agesContainer.appendChild(div);
+                }
+            } else {
+                agesContainer.classList.add('hidden'); // إخفاء الحاوية إذا كان العدد صفر
+            }
+        });
+
         // كود معالجة إرسال الفورم لمنع إعادة تحميل الصفحة وإظهار رسالة النجاح
         var form = document.getElementById("booking-form");
         
         async function handleSubmit(event) {
             event.preventDefault();
-            
-            // تحقق إذا كان المستخدم قد وضع رابط Formspree الحقيقي أم لا
-            const endpoint = form.getAttribute('action');
-            if(endpoint === 'YOUR_FORMSPREE_ENDPOINT') {
-                alert("تنبيه للمطور: يرجى استبدال 'YOUR_FORMSPREE_ENDPOINT' برابط Formspree الخاص بك لكي يعمل الإرسال.");
-                // للمحاكاة فقط أثناء العرض
-                form.style.display = 'none';
-                document.getElementById('success-message').classList.remove('hidden');
-                return;
-            }
 
             var status = document.getElementById("submitBtn");
             const originalText = status.innerHTML;
