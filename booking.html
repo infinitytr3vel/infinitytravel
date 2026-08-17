@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>طلب حجز مخصص | إنفينيتي ترافيل</title>
+    <meta name="description" content="نموذج طلب حجز رحلات سياحية مخصص مع إنفينيتي ترافيل.">
+    
+    <!-- ================= Favicon ================= -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- ================= Styles & Fonts ================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0284c7', 
+                        secondary: '#0369a1', 
+                        accent: '#f59e0b', 
+                        dark: '#1e293b', 
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html, body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+        }
+        .form-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+        }
+        /* تصميم حقول الإدخال عند التركيز */
+        .custom-input:focus {
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header بسيط مخصص لصفحة الحجز -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center" title="العودة للرئيسية">
+                    <img src="images/logo.png" alt="لوجو إنفينيتي ترافيل" class="h-12 w-auto object-contain">
+                </a>
+                <a href="index.html" class="text-slate-500 hover:text-primary font-bold flex items-center gap-2 transition">
+                    العودة للرئيسية <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12 px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto">
+            
+            <!-- عنوان الصفحة -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">نموذج طلب حجز</h1>
+                <p class="text-slate-600 text-lg">يرجى تعبئة البيانات التالية بدقة لنتمكن من تقديم أفضل عرض يناسبك، وسيتم التواصل معك في أقرب وقت.</p>
+            </div>
+
+            <!-- 
+                Formspree Integration:
+                استبدل "YOUR_FORMSPREE_ENDPOINT" بالرابط الذي ستحصل عليه من موقع Formspree
+                طريقة العمل:
+                1. اذهب إلى formspree.io وسجل حساب مجاني.
+                2. اضغط "New Project" ثم "New Form".
+                3. انسخ رابط "Endpoint" الذي سيعطيك إياه (سيكون شكله هكذا: https://formspree.io/f/xyz...)
+                4. ضعه بدلاً من YOUR_FORMSPREE_ENDPOINT أدناه.
+            -->
+            <div class="bg-white rounded-2xl p-6 md:p-10 form-shadow border border-slate-100">
+                <!-- شاشة نجاح الإرسال (تظهر بعد إرسال الفورم بواسطة Formspree) -->
+                <div id="success-message" class="hidden text-center py-10">
+                    <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark mb-4">تم إرسال طلبك بنجاح!</h2>
+                    <p class="text-slate-600 mb-8">شكراً لك لتواصلك مع إنفينيتي ترافيل. لقد استلمنا طلبك وسيقوم فريقنا بالتواصل معك قريباً جداً على الأرقام التي قمت بتزويدنا بها.</p>
+                    <a href="index.html" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-secondary transition inline-block">العودة للصفحة الرئيسية</a>
+                </div>
+
+                <form id="booking-form" action="YOUR_FORMSPREE_ENDPOINT" method="POST" class="space-y-8">
+                    
+                    <!-- 1. بيانات العميل -->
+                    <div>
+                        <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-regular fa-user ml-2"></i> بيانات العميل</h3>
+                        <div class="space-y-5">
+                            <div>
+                                <label for="fullName" class="block text-sm font-bold text-slate-700 mb-2">الاسم بالكامل <span class="text-red-500">*</span></label>
+                                <input type="text" id="fullName" name="الاسم" required class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white" placeholder="اكتب اسمك الثلاثي">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-slate-700 mb-2">رقم الموبايل <span class="text-red-500">*</span></label>
+                                    <input type="tel" id="phone" name="رقم الموبايل" required class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
+                                </div>
+                                <div>
+                                    <label for="whatsapp" class="block text-sm font-bold text-slate-700 mb-2">رقم الواتساب <span class="text-sm text-slate-400 font-normal">(إن وجد)</span></label>
+                                    <input type="tel" id="whatsapp" name="رقم الواتساب" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="01xxxxxxxxx">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-slate-700 mb-2">البريد الإلكتروني <span class="text-sm text-slate-400 font-normal">(اختياري)</span></label>
+                                    <input type="email" id="email" name="الإيميل" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-left" dir="ltr" placeholder="example@mail.com">
+                                </div>
+                                <div>
+                                    <label for="city" class="block text-sm font-bold text-slate-700 mb-2">المحافظة / المدينة</label>
+                                    <input type="text" id="city" name="المحافظة" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white" placeholder="اكتب اسم المحافظة">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. تفاصيل الرحلة -->
+                    <div>
+                        <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-solid fa-suitcase-rolling ml-2"></i> تفاصيل الرحلة</h3>
+                        <div class="space-y-5">
+                            <div>
+                                <label for="programType" class="block text-sm font-bold text-slate-700 mb-2">نوع البرنامج / الوجهة <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <select id="programType" name="الوجهة_المطلوبة" required class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                        <option value="" disabled selected>-- اختر الوجهة المطلوبة --</option>
+                                        <option value="شرم الشيخ">شرم الشيخ</option>
+                                        <option value="الغردقة">الغردقة</option>
+                                        <option value="الساحل الشمالي">الساحل الشمالي</option>
+                                        <option value="مرسى مطروح">مرسى مطروح</option>
+                                        <option value="نايل كروز (الأقصر وأسوان)">نايل كروز (الأقصر وأسوان)</option>
+                                        <option value="دهب / طابا">دهب / طابا</option>
+                                        <option value="سيوة">سيوة</option>
+                                        <option value="العين السخنة">العين السخنة</option>
+                                        <option value="رحلة يوم واحد (Day Use)">رحلة يوم واحد (Day Use)</option>
+                                        <option value="غير ذلك">غير ذلك (يرجى التوضيح في الملاحظات)</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-slate-500">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="duration" class="block text-sm font-bold text-slate-700 mb-2">مدة الرحلة المطلوبة</label>
+                                    <div class="relative">
+                                        <select id="duration" name="المدة" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                            <option value="" disabled selected>-- اختر المدة --</option>
+                                            <option value="يوم واحد (Day Use)">يوم واحد (Day Use)</option>
+                                            <option value="3 أيام / 2 ليلة">3 أيام / 2 ليلة</option>
+                                            <option value="4 أيام / 3 ليالي">4 أيام / 3 ليالي</option>
+                                            <option value="5 أيام / 4 ليالي">5 أيام / 4 ليالي</option>
+                                            <option value="أسبوع أو أكثر">أسبوع أو أكثر</option>
+                                            <option value="غير محدد بعد">غير محدد بعد</option>
+                                        </select>
+                                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-slate-500">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="travelDate" class="block text-sm font-bold text-slate-700 mb-2">تاريخ السفر المقترح</label>
+                                    <input type="date" id="travelDate" name="تاريخ_السفر" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white text-slate-600">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div>
+                                    <label for="adults" class="block text-sm font-bold text-slate-700 mb-2">البالغين <span class="text-xs text-slate-400 font-normal">(+12 سنة)</span></label>
+                                    <input type="number" id="adults" name="عدد_البالغين" min="1" value="2" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 text-center">
+                                </div>
+                                <div>
+                                    <label for="children" class="block text-sm font-bold text-slate-700 mb-2">الأطفال <span class="text-xs text-slate-400 font-normal">(تحت 12)</span></label>
+                                    <input type="number" id="children" name="عدد_الأطفال" min="0" value="0" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 text-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. ملاحظات إضافية -->
+                    <div>
+                        <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-regular fa-comment-dots ml-2"></i> ملاحظات إضافية</h3>
+                        <div>
+                            <label for="notes" class="block text-sm font-bold text-slate-700 mb-2">تفاصيل أخرى أو استفسارات <span class="text-sm text-slate-400 font-normal">(اختياري)</span></label>
+                            <textarea id="notes" name="الملاحظات" rows="4" class="custom-input w-full px-4 py-3 rounded-lg border border-slate-200 outline-none transition bg-slate-50 focus:bg-white resize-y" placeholder="اكتب أي ملاحظات أو متطلبات خاصة هنا (مثل: مستوى الفندق، طلبات شهر عسل، إلخ)..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- زر الإرسال -->
+                    <div class="pt-4">
+                        <button type="submit" id="submitBtn" class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-secondary transition shadow-lg flex items-center justify-center gap-2">
+                            <span>تأكيد وإرسال الطلب</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer بسيط -->
+    <footer class="bg-dark text-slate-400 py-6 text-center text-sm mt-auto">
+        <p>&copy; <span id="year"></span> إنفينيتي ترافيل (Infinity Travel). جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // كود معالجة إرسال الفورم لمنع إعادة تحميل الصفحة وإظهار رسالة النجاح
+        var form = document.getElementById("booking-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            // تحقق إذا كان المستخدم قد وضع رابط Formspree الحقيقي أم لا
+            const endpoint = form.getAttribute('action');
+            if(endpoint === 'YOUR_FORMSPREE_ENDPOINT') {
+                alert("تنبيه للمطور: يرجى استبدال 'YOUR_FORMSPREE_ENDPOINT' برابط Formspree الخاص بك لكي يعمل الإرسال.");
+                // للمحاكاة فقط أثناء العرض
+                form.style.display = 'none';
+                document.getElementById('success-message').classList.remove('hidden');
+                return;
+            }
+
+            var status = document.getElementById("submitBtn");
+            const originalText = status.innerHTML;
+            status.innerHTML = 'جاري الإرسال... <i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+            status.disabled = true;
+            status.classList.add('opacity-70');
+
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('success-message').classList.remove('hidden');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("عذراً، حدثت مشكلة أثناء إرسال طلبك. يرجى المحاولة مرة أخرى أو التواصل معنا عبر الواتساب.");
+                        }
+                    })
+                }
+            }).catch(error => {
+                alert("عذراً، حدثت مشكلة بالاتصال. يرجى المحاولة مرة أخرى.");
+            }).finally(() => {
+                status.innerHTML = originalText;
+                status.disabled = false;
+                status.classList.remove('opacity-70');
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
