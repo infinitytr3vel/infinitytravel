@@ -6,10 +6,10 @@
     <title>طلب حجز مخصص | إنفينيتي ترافيل</title>
     <meta name="description" content="نموذج طلب حجز رحلات سياحية مخصص مع إنفينيتي ترافيل.">
     
-    <!-- ================= Favicon ================= -->
+   
     <link rel="icon" type="image/png" href="images/favicon.png">
     
-    <!-- ================= Styles & Fonts ================= -->
+   
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
         .form-shadow {
             box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
         }
-        /* تصميم حقول الإدخال عند التركيز */
+        
         .custom-input:focus {
             border-color: #0284c7;
             box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
@@ -51,7 +51,7 @@
 </head>
 <body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Header بسيط مخصص لصفحة الحجز -->
+    
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -73,18 +73,9 @@
                 <h1 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">نموذج طلب حجز</h1>
                 <p class="text-slate-600 text-lg">يرجى تعبئة البيانات التالية بدقة لنتمكن من تقديم أفضل عرض يناسبك، وسيتم التواصل معك في أقرب وقت.</p>
             </div>
-
-            <!-- 
-                Formspree Integration:
-                استبدل "YOUR_FORMSPREE_ENDPOINT" بالرابط الذي ستحصل عليه من موقع Formspree
-                طريقة العمل:
-                1. اذهب إلى formspree.io وسجل حساب مجاني.
-                2. اضغط "New Project" ثم "New Form".
-                3. انسخ رابط "Endpoint" الذي سيعطيك إياه (سيكون شكله هكذا: https://formspree.io/f/xyz...)
-                4. ضعه بدلاً من YOUR_FORMSPREE_ENDPOINT أدناه.
-            -->
+            
             <div class="bg-white rounded-2xl p-6 md:p-10 form-shadow border border-slate-100">
-                <!-- شاشة نجاح الإرسال (تظهر بعد إرسال الفورم بواسطة Formspree) -->
+                
                 <div id="success-message" class="hidden text-center py-10">
                     <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
                         <i class="fa-solid fa-check"></i>
@@ -96,7 +87,7 @@
 
                 <form id="booking-form" action="https://formspree.io/f/myegnaez" method="POST" class="space-y-8">
                     
-                    <!-- 1. بيانات العميل -->
+                   
                     <div>
                         <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-regular fa-user ml-2"></i> بيانات العميل</h3>
                         <div class="space-y-5">
@@ -163,7 +154,7 @@
                         </div>
                     </div>
 
-                    <!-- 2. تفاصيل الرحلة -->
+                   
                     <div>
                         <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-solid fa-suitcase-rolling ml-2"></i> تفاصيل الرحلة</h3>
                         <div class="space-y-5">
@@ -224,14 +215,14 @@
                                 </div>
                             </div>
 
-                            <!-- حاوية أعمار الأطفال الديناميكية (مخفية افتراضياً) -->
+                            
                             <div id="childrenAgesContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 hidden mt-2 border-t border-slate-100 pt-4">
-                                <!-- سيتم إضافة حقول أعمار الأطفال هنا تلقائياً بواسطة الجافاسكربت -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. ملاحظات إضافية -->
+                    
                     <div>
                         <h3 class="text-lg font-bold text-primary border-b border-slate-100 pb-2 mb-4"><i class="fa-regular fa-comment-dots ml-2"></i> ملاحظات إضافية</h3>
                         <div>
@@ -240,7 +231,7 @@
                         </div>
                     </div>
 
-                    <!-- زر الإرسال -->
+                    
                     <div class="pt-4">
                         <button type="submit" id="submitBtn" class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-secondary transition shadow-lg flex items-center justify-center gap-2">
                             <span>تأكيد وإرسال الطلب</span>
@@ -252,7 +243,7 @@
         </div>
     </main>
 
-    <!-- Footer بسيط -->
+   
     <footer class="bg-dark text-slate-400 py-6 text-center text-sm mt-auto">
         <p>&copy; <span id="year"></span> إنفينيتي ترافيل (Infinity Travel). جميع الحقوق محفوظة.</p>
     </footer>
@@ -260,21 +251,21 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // --- كود معالجة أعمار الأطفال الديناميكي ---
+       
         const childrenInput = document.getElementById('children');
         const agesContainer = document.getElementById('childrenAgesContainer');
 
         childrenInput.addEventListener('input', function() {
-            // التأكد من أن العدد ليس سالباً
+            
             const count = Math.max(0, parseInt(this.value) || 0);
             
-            // إفراغ الحاوية قبل إضافة الحقول الجديدة
+           
             agesContainer.innerHTML = '';
 
             if (count > 0) {
-                agesContainer.classList.remove('hidden'); // إظهار الحاوية
+                agesContainer.classList.remove('hidden'); 
                 
-                // إضافة خانة عمر لكل طفل
+                
                 for (let i = 1; i <= count; i++) {
                     const div = document.createElement('div');
                     div.innerHTML = `
@@ -284,11 +275,11 @@
                     agesContainer.appendChild(div);
                 }
             } else {
-                agesContainer.classList.add('hidden'); // إخفاء الحاوية إذا كان العدد صفر
+                agesContainer.classList.add('hidden'); 
             }
         });
 
-        // كود معالجة إرسال الفورم لمنع إعادة تحميل الصفحة وإظهار رسالة النجاح
+        
         var form = document.getElementById("booking-form");
         
         async function handleSubmit(event) {
