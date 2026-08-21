@@ -48,7 +48,10 @@
       "image": "https://infinitytravel.online/images/hero-bg.jpg",
       "@id": "https://infinitytravel.online/",
       "url": "https://infinitytravel.online/",
-      "telephone": "+201000466853",
+      "telephone": [
+        "+201000466853",
+        "+201042959931"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "شارع مجمع البنوك - منطقة 2 - أمام هانيمكس للأثاث",
@@ -235,6 +238,10 @@
             transform: scale(1.1);
             background-color: #128C7E;
         }
+        .phone-link-hover:hover {
+            transform: translateX(-5px);
+            color: #0284c7;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased relative">
@@ -284,9 +291,8 @@
                     
                     <!-- أزرار الموبايل -->
                     <div class="flex flex-col gap-2 mt-4 px-4">
-                        <a href="tel:+201000466853" class="w-full bg-primary text-white px-3 py-3 rounded-md font-bold text-center"><i class="fa-solid fa-phone ml-2"></i> اتصل بنا الآن</a>
-                        <!-- زر الموبايل لصفحة الحجز الجديدة -->
-                        <a href="booking.html" class="w-full bg-accent text-white px-3 py-3 rounded-md font-bold text-center"><i class="fa-solid fa-file-signature ml-2"></i> طلب حجز مخصص (نموذج)</a>
+                        <a href="tel:+201000466853" class="w-full bg-primary text-white px-3 py-3 rounded-md font-bold text-center flex justify-center items-center gap-2"><i class="fa-solid fa-phone"></i> اتصل بنا الآن</a>
+                        <a href="booking.html" class="w-full bg-accent text-white px-3 py-3 rounded-md font-bold text-center flex justify-center items-center gap-2"><i class="fa-solid fa-file-signature"></i> طلب حجز مخصص</a>
                     </div>
                 </div>
             </div>
@@ -307,7 +313,6 @@
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-4 sm:px-0">
                     <a href="#destinations" class="w-full sm:w-auto bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-blue-500 transition shadow-[0_0_20px_rgba(2,132,199,0.5)] transform hover:scale-105 text-center">استكشف الوجهات</a>
                     
-                    <!-- تغيير بسيط ليوجه إما للنموذج السريع أو يترك كما هو للتواصل -->
                     <a href="booking.html" class="w-full sm:w-auto bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-600 transition shadow-lg transform hover:scale-105 text-center">احجز رحلتك الآن</a>
                 </div>
             </div>
@@ -616,14 +621,14 @@
                             </span>
                         </summary>
                         <p class="text-slate-600 mt-4 leading-relaxed">
-                            يمكنك تأكيد الحجز بسهولة عبر التواصل معنا على واتساب (01000466853)، وسيقوم فريقنا بإرسال كافة تفاصيل الدفع وطرق السداد المتاحة والآمنة.
+                            يمكنك تأكيد الحجز بسهولة عبر التواصل معنا على واتساب (01000466853 أو 01042959931)، وسيقوم فريقنا بإرسال كافة تفاصيل الدفع وطرق السداد المتاحة والآمنة.
                         </p>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section (النموذج السريع للواتساب كما هو) -->
+        <!-- Contact Section -->
         <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -644,8 +649,15 @@
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0 mt-1"><i class="fa-solid fa-phone"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-dark">رقم الهاتف / واتساب</h4>
-                                    <a href="tel:+201000466853" class="text-primary hover:underline text-sm font-bold mt-1 block" dir="ltr">0100 046 6853</a>
+                                    <h4 class="font-bold text-dark mb-2">أرقام الهواتف / واتساب</h4>
+                                    <!-- الرقم الأول -->
+                                    <a href="tel:+201000466853" class="text-slate-700 phone-link-hover transition text-sm font-bold block mb-2" dir="ltr">
+                                        <i class="fa-brands fa-whatsapp text-[#25D366] ml-1 text-base"></i> 0100 046 6853
+                                    </a>
+                                    <!-- الرقم الثاني (الجديد) -->
+                                    <a href="tel:+201042959931" class="text-slate-700 phone-link-hover transition text-sm font-bold block" dir="ltr">
+                                        <i class="fa-brands fa-whatsapp text-[#25D366] ml-1 text-base"></i> 0104 295 9931
+                                    </a>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -750,7 +762,10 @@
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-bold text-white mb-4">تواصل معنا سريعاً</h3>
                     <div class="flex flex-col space-y-3 text-sm">
-                        <a href="tel:+201000466853" class="hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-phone"></i> 0100 046 6853</a>
+                        <!-- تم إضافة الرقمين هنا -->
+                        <a href="tel:+201000466853" class="hover:text-primary transition flex items-center gap-2" dir="ltr"><i class="fa-solid fa-phone"></i> 0100 046 6853</a>
+                        <a href="tel:+201042959931" class="hover:text-primary transition flex items-center gap-2" dir="ltr"><i class="fa-solid fa-phone"></i> 0104 295 9931</a>
+                        
                         <a href="mailto:info@infinitytravel.online" class="hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-envelope"></i> info@infinitytravel.online</a>
                         <p class="flex items-start gap-2 text-slate-400"><i class="fa-solid fa-location-dot mt-1"></i> الغردقة - شارع مجمع البنوك - منطقة 2 - أمام هانيمكس.</p>
                     </div>
@@ -815,7 +830,8 @@
             text += `👤 *الاسم:* ${name}\n📞 *رقم الهاتف:* ${phone}\n🏖️ *الوجهة المطلوبة:* ${destination}\n\n💬 *التفاصيل:*\n${message}`;
 
             const encodedText = encodeURIComponent(text);
-            const waNumber = '201000466853';
+            // سيتم إرسال رسالة النموذج بشكل افتراضي إلى الرقم الأساسي
+            const waNumber = '201000466853'; 
             const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
             
             window.open(waUrl, '_blank');
